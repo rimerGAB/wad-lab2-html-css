@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Student Registration Portal</h1>
+    <p class="desc">
+      Review the available courses in the table below, then complete the
+      registration form.
+    </p>
+
+    <div class="container">
+      <!-- LEFT SIDE -->
+      <div>
+        <h2>Available Courses</h2>
+        <table>
+          <caption>
+            Computer Science Department Courses - A.Y. 2026
+          </caption>
+          <tr>
+            <th rowspan="2">Course Code</th>
+            <th rowspan="2">Course Name</th>
+            <th colspan="2">Schedule</th>
+          </tr>
+          <tr>
+            <th>Day</th>
+            <th>Time</th>
+          </tr>
+          <tr>
+            <td>CS101</td>
+            <td>Introduction to Programming</td>
+            <td>Mon & Wed</td>
+            <td>9:00-10:00 AM</td>
+          </tr>
+          <tr>
+            <td>CS102</td>
+            <td>Web Development Basics</td>
+            <td>Tue & Thu</td>
+            <td>1:00-2:00 PM</td>
+          </tr>
+          <tr>
+            <td>CS103</td>
+            <td>Database Systems</td>
+            <td rowspan="2">Fri</td>
+            <td>10:00-12:00 NN</td>
+          </tr>
+          <tr>
+            <td>CS104</td>
+            <td>Computer Networks</td>
+            <td>1:00-3:00 PM</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div id="registration-form">
+        <h2>Registration Form</h2>
+        <form action="./submitted.html" method="post">
+          <label for="name">Full Name:</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Lname, Fname, M.I."
+            required
+          />
+
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@example.com"
+            required
+          />
+
+          <p>Year Level:</p>
+          <input
+            type="radio"
+            name="year"
+            id="first"
+            value="1st Year"
+            required
+          />
+          <label for="first">1st Year</label>
+          <br />
+          <input type="radio" name="year" id="second" value="2nd Year" />
+          <label for="second">2nd Year</label>
+          <br />
+          <input type="radio" name="year" id="third" value="3rd Year" />
+          <label for="third">3rd Year</label>
+          <br />
+          <input type="radio" name="year" id="fourth" value="4th Year" />
+          <label for="fourth">4th Year</label>
+          <br />
+
+          <p>Preferred Study Mode: (Optional)</p>
+          <input type="checkbox" id="online" name="mode" value="Online" />
+          <label for="online">Online</label>
+          <br />
+          <input type="checkbox" id="onsite" name="mode" value="Onsite" />
+          <label for="onsite">Onsite</label>
+          <br />
+
+          <label for="course">Select Course:</label>
+          <select name="course" id="course" required>
+            <option value="">--Choose a Course--</option>
+            <option value="CS101">CS101 - Introduction to Programming</option>
+            <option value="CS102">CS102 - Web Development Basics</option>
+            <option value="CS103">CS103 - Database Systems</option>
+            <option value="CS104">CS104 - Computer Networks</option>
+          </select>
+
+          <label for="comments">Additional Note:</label>
+          <textarea
+            name="comments"
+            id="comments"
+            rows="4"
+            placeholder="Enter any additional requests or notes..."
+            required
+          ></textarea>
+
+          <button type="submit">Register</button>
+          <button type="reset">Clear Form</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

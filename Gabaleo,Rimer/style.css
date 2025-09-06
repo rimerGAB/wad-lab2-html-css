@@ -1,0 +1,154 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+line-height: 1.6;
+background: linear-gradient(to right,rgba(50, 172, 209, 0.849) ,rgba(154, 221, 199, 0.959));
+padding: 20px;
+display: flex;
+flex-direction: column;
+gap: 40px;
+max-width: 1100px;
+margin: auto;
+}
+
+h1{
+text-align: center;
+color:  rgba(16, 17, 104, 0.822);
+margin-bottom: 10px;
+text-shadow: 3px 2.5px 3px rgba(0, 0, 0, 0.432);
+}
+
+p{
+margin-bottom: 20px;
+color: grey;
+}
+
+/* CLASS SELECTOR */
+
+.desc {
+text-align: center;
+}
+
+.container{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 30px;
+}
+
+/* DESCENDANT SELECTOR*/
+
+table caption{
+font-family: bold;
+margin-bottom: 10px;
+color: rgb(11, 137, 175);
+}
+
+table{
+border-collapse: collapse;
+width: 100%;
+background: rgb(252, 252, 252);
+box-shadow: 0 2px 8px rgba(0, 0, 0 ,0.1);
+}
+
+th,td{
+border: 1px solid #2b2828;
+padding: 12px;
+text-align: center;
+color: rgb(2, 66, 45);
+}
+
+th{
+background: #2f6381;
+text-align: center;
+}
+
+tr:nth-child(even){
+      background-color: #91d46a;
+}
+
+#registration-form{
+background: #fff;
+padding: 24px;
+border: 1px solid whitesmoke;
+border-radius: 10px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.26);
+}
+
+#registration-form h2{
+color: #2f6381;
+margin-bottom: 14px ;
+}
+
+.form-group{
+display: block;
+margin-bottom: 14px;
+}
+.form-group label{
+font-weight: bold;
+margin-top: 4px;
+}
+
+input,
+select,
+textarea {
+padding:10px;
+margin-top: 4px;
+width: 100%;
+border: 1px solid #bbb;
+border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+width: auto;
+margin-right: 5px;
+}
+
+/* ATTRIBUTE SELECTOR */
+input[required]{
+border-left: 4px solid rgb(58, 124, 141);
+}
+
+/* PSEUDO-CLASS SELECTORS */
+input:focus,
+select:focus,
+textarea:focus{
+outline: none;
+border: 1px solid rgb(114, 221, 235);
+box-shadow: 0 0 4px rgba(16, 17, 104, 0.822);
+}
+
+button{
+padding: 10px 14px;
+margin-top: 14px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+color: rgb(225, 228, 230);
+}
+
+button[type="submit"]{
+background: green ;
+}
+button[type="submit"]:hover{
+background: rgb(2, 31, 196) ;
+}
+button[type="reset"]{
+background: rgb(212, 6, 6) ;
+}
+button[type="reset"]:hover{
+background: rgb(2, 31, 196) ;
+}
+
+@media(max-width: 900px){
+.container{
+grid-template-columns: 3fr;
+}
+
+
+}
